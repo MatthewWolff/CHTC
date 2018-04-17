@@ -1,0 +1,20 @@
+universe			= vanilla
+logs				= /home/mwolff3/submitted/logs/mapping.log
+error				= /home/mwolff3/submitted/errs/mapping.err 
+output				= /home/mwolff3/submitted/output/mapping_$(Cluster).out
+executable			= mapping_script.sh
+arguments			= $(Process)
+# transfer_input_files 	=  # unused bc we're using Gluster
+# name files dynamically with : $(Cluster)_$(Process) or $(echo $(date +%Y%m%d_%H%M%S))
+
+# IMPORTANT! Require execute servers that have Gluster:
+Requirements		= (Target.HasGluster == true)
+should_transfer_files	= YES
+when_to_transfer_output	= ON_EXIT
+
+# computational resources for each job
+request_cpus		= 1
+request_memory		= 3GB
+request_disk		= 1MB
+
+queue 1
