@@ -1,0 +1,18 @@
+universe = vanilla
+log = submitted/logs/interactive.log
+output = submitted/output/process.out
+error = submitted/errs/process.err
+
+# If you wish to compile code, you'll need the below lines. 
+#  Otherwise, LEAVE THEM OUT if you just want to interactively test!
++IsBuildJob = true
+requirements = (OpSysMajorVer =?= 6) && ( IsBuildSlot == true )
+
+transfer_input_files = python_tarring/Python-2.7.14.tgz
+# from https://www.python.org/ftp/python/2.7.14/Python-2.7.14.tgz
+
+request_cpus = 1
+request_memory = 1GB
+request_disk = 1GB
+
+queue
