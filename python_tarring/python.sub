@@ -2,7 +2,7 @@ universe				= vanilla
 logs					= /home/mwolff3/submitted/logs/python_build.log
 error					= /home/mwolff3/submitted/errs/python_build.err
 output					= /home/mwolff3/submitted/output/python_build.out
-executable				= interactive_python.sh
+executable				= custom_python_build.sh
 arguments				= $(Process)
 
 # If you wish to compile code, you'll need the below lines. 
