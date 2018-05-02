@@ -1,0 +1,17 @@
+universe			= vanilla
+logs				= /home/mwolff3/submitted/logs/coalesce.log
+error				= /home/mwolff3/submitted/errs/coalesce.err
+output				= /home/mwolff3/submitted/output/coalesce.out
+executable			= coalesce_script.sh
+arguments			= $(Process)
+
+# IMPORTANT! Require execute servers that have Gluster:
+Requirements		= (Target.HasGluster == true)
+should_transfer_files	= YES
+
+# computational resources for each job
+request_cpus		= 10
+request_memory		= 10GB
+request_disk		= 215GB
+
+queue 1
