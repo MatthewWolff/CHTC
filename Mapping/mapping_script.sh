@@ -22,7 +22,7 @@ for f in `ls /mnt/gluster/mwolff3/*.fasta.tgz`; do
   [[ $f = *"PUBG"* ]] && continue
   [[ $f = *"PUBN"* ]] && continue
   tar -xzf $f -C metagenomes/
-done && echo "retrieved metagenomes"
+done && echo "extracted metagenomes"
 # tar -xzf /mnt/gluster/mwolff3/metagenomes.tar.gz -C metagenomes/ && echo "extracted metagenomes"
 tar -xzf /mnt/gluster/mwolff3/refGenomes.tar.gz -C refGenomes/ && echo "extracted refGenomes"
 echo
