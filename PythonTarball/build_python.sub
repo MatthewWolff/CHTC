@@ -1,8 +1,8 @@
 universe				= vanilla
-logs					= /home/mwolff3/submitted/logs/python_build.log
-error					= /home/mwolff3/submitted/errs/python_build.err
-output					= /home/mwolff3/submitted/output/python_build.out
-executable				= custom_python_build.sh
+logs					= /home/mwolff3/submitted/logs/build_python.log
+error					= /home/mwolff3/submitted/errs/build_python.err
+output					= /home/mwolff3/submitted/output/build_python.out
+executable				= build_python.sh
 arguments				= $(Process)
 
 # If you wish to compile code, you'll need the below lines. 
