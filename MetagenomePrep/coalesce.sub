@@ -2,7 +2,7 @@ universe			= vanilla
 logs				= /home/mwolff3/submitted/logs/coalesce.log
 error				= /home/mwolff3/submitted/errs/coalesce.err
 output				= /home/mwolff3/submitted/output/coalesce.out
-executable			= coalesce_script.sh
+executable			= coalesce.sh
 arguments			= $(Process)
 
 # IMPORTANT! Require execute servers that have Gluster:
