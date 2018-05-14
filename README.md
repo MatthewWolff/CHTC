@@ -1,6 +1,2 @@
 # CHTC
-* `checksums.sh` generates MD5 checksums for all compressed tar files in a directory >> `checksums.txt`
-* `transfer.sh` transfers all compressed tar files in a directory to Gluster >> `processed.txt`
-* `verify.sh` generates MD5 checksums for all compressed tar files in the Gluster directory, then verifies that they match with previously computed values. 1> `validation.txt` 2> `vcorrupt.txt`
-* `coalesce_script.sh` extracts all Gluster files to a job and coalesces them into a large .tgz back in Glust
-* python_tarring stuff is for creating custom python builds for condor jobs + the java stuff necessary to use `Samtools`
+This repository basically contains all of the jobs, scripts, aliases, and functions that I used to do work on the server for the Center of High-Throughput Computing. Some compartmentalization was done in terms of separating the scripts used for processing input files prior to mapping for the metagenomic pipeline, but overall the organization is fleeting. That said, documentation inside of the folders is thorough.
