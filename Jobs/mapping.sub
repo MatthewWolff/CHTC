@@ -13,7 +13,7 @@ when_to_transfer_output	= ON_EXIT
 
 # computational resources for each job
 request_cpus		= 10
-request_memory		= 160GB
-request_disk		= 160GB
+request_memory		= 50MB
+request_disk		= 180GB
 
 queue
