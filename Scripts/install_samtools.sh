@@ -1,17 +1,10 @@
 #!/bin/bash
-git clone git://github.com/samtools/samtools.git
-tar -xzf samtools.tar.gz
-mv samtools samtools2 && mkdir samtools
-cd samtools2
-git clone https://github.com/samtools/htslib
-autoheader     # If using configure, generate the header template...
-autoconf       # ...and configure script (or use autoreconf to do both)
-./configure --prefix=$(pwd)/../htslib --disable-lzma
-make
-make install
-cd ..
-autoreconf
+wget https://github.com/samtools/samtools/releases/download/1.8/samtools-1.8.tar.bz2
+tar -xjvf samtools-1.8.tar.bz2 && rm samtools-1.8.tar.bz2
+mkdir samtools
+cd samtools-1.8
 ./configure --prefix=$(pwd)/../samtools --disable-lzma
 make
 make install
-tar -czf samtools.tar.gz
+cd ..
+tar -czf samtools.tar.gz samtools/
