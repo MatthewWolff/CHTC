@@ -11,4 +11,4 @@ alias cerr='cd /home/mwolff3/submitted/errs/ && ls -t | head -1 | xargs cat && c
 alias clog='cd /home/mwolff3/submitted/logs/ && ls -t | head -1 | xargs cat && cd -'  # check most recent log log
 alias cout='cd /home/mwolff3/submitted/output/ && ls -t | head -1 | xargs cat && cd -'  # check most recent output log
 # unpack most recent results from mapping job
-alias t='[ -f "$HOME/mapping_results.tar.gz" ] && rm -rf $HOME/results/ && mkdir $HOME/results && tar -xzf $HOME/mapping_results.tar.gz -C $HOME/results/ && rm $HOME/mapping_results.tar.gz && cd $HOME/results || echo "Error: mapping_results.tar.gz is not present"' 
+alias unpack='[ -f "$HOME/mapping_results.tar.gz" ] && rm -rf $HOME/results/ && mkdir $HOME/results && tar -xzf $HOME/mapping_results.tar.gz -C $HOME/results/ && rm $HOME/mapping_results.tar.gz && cd $HOME/results || echo "Error: mapping_results.tar.gz is not present"' 
