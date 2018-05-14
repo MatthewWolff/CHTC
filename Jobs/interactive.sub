@@ -1,0 +1,17 @@
+universe 	= vanilla
+log 		= /home/mwolff3/submitted/logs/interactive.log
+output 		= /home/mwolff3/submitted/output/process.out
+error 		= /home/mwolff3/submitted/errs/process.err
+
+# If you wish to compile code, you'll need the below lines. 
+#  Otherwise, LEAVE THEM OUT if you just want to interactively test!
++IsBuildJob = true
+requirements = (OpSysMajorVer =?= 6) && ( IsBuildSlot == true )
+
+# transfer_input_files = 
+
+request_cpus	= 1
+request_memory 	= 1GB
+request_disk 	= 1GB
+
+queue
