@@ -1,3 +1,14 @@
+### FUNCTIONS
+mkjob() # creates a job from the template.sub, replacing all necessary lines. The only changse that might need to be made is job requested space
+{
+  # typically I type up a script to do something, then do `mkjob <script name>` so that both files have the same name, except .sh and .sub
+  # then i type `cs jobs/<job name>` for `condor_submit` to send it off to the queue (you can still add the -i flag if you want)
+  cp $HOME/jobs/template.sub $HOME/jobs/"$1".sub
+  sed -i "s/template/$1/" $HOME/jobs/"$1".sub
+  echo "$1.sub made with a requested 10GB disk and 10GB memory!"
+}
+
+### ALIASES
 alias h='condor_q -held'  # check held jobs
 alias q='condor_q'  # check job queue
 alias glust='ssh mwolff3@transfer.chtc.wisc.edu'  # connect to gluster
