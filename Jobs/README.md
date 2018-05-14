@@ -7,10 +7,12 @@ independently - attempts to use the massive coalesced files weren't very succces
   * creates `file_info.txt` in Gluster (can be checked as the job runs)
 * `interactive.sub` submits a request for an interaction session (1GB of Disk and Memory requested)
   * Usage: `cs -i jobs/interactive.sub`
+* `install_samtools.sub` builds a samtools version for use during mapping
+  * returns samtools.tar.gz to home directory
 * `mapping.sub` runs the entire mapping process
   * requests 10 CPUs and 160GB of memory *and* disk (this can probably be optimized, but I didn't fool around with it 
   as it often took 12 hours+ to get through the queue with a request this large. A request of 10GB disk failed.)
   * returns `mapping_results.tar.gz` (for 2 .ref files, was ~5.2GB). Use `tar -xzf mapping_results.tar.gz coverage.txt` to extract only coverage.txt
-  * **requires that `metagenomes.tar.gz` and `refGenomes.tar.gz` are present in Gluster**
+  * **requires that `metagenomes.tar.gz` and `refGenomes.tar.gz` are present in Gluster, as well as a file called GlusterInput.tar.gz, containing a tar.gz of samtools, python, and jdk, as well as a mapMetasVsRefs folder**
 * `template.sub` a template job that is referenced by `mkjob` (reference [/Convenience/aliases.sh](https://github.com/MatthewWolff/CHTC/blob/master/Convenience/aliases.sh) for more information)
   * modify as desired - default disk and memory request is 10GB
